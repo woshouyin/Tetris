@@ -96,8 +96,9 @@ class Tetris:
 		self.__init__(self.size, self.bgColor, self.reward, self.modelSet)
 	
 	def setStepTime(self):
-		self.stepTime = (- math.atan(0.01 * self.score - 10) + math.pi / 2) / math.pi
-	
+		#self.stepTime = (- math.atan(0.01 * self.score - 10) + math.pi / 2) / math.pi
+		self.stepTime = 0.4
+		
 	def setNextItem(self, model = None):
 		if model == None:
 			model = random.choice(self.modelSet)
